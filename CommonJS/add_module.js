@@ -1,6 +1,12 @@
-function add(n1, n2) {
-  return n1 + n2;
+const addOneToNumber = require('./add_one');
+
+function addTwo(number) {
+  return addOneToNumber(addOneToNumber(number));
 }
 
+const addThree = (number) => addTwo(addOneToNumber(number));
 
-module.exports = add;
+module.exports = {
+  addTwo,
+  addThree
+}
