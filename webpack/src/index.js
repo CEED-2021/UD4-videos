@@ -1,1 +1,4 @@
-console.log('Hello, World! How are you?')
+import './app.css'
+const { hello }  = require('./library')
+
+console.log(hello());
